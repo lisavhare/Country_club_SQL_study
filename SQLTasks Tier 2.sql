@@ -37,7 +37,7 @@ Write a SQL query to produce a list of the names of the facilities that do. */
 
 SELECT * 
 FROM Facilities 
-WHERE membercost > 0;
+WHERE membercost > 0
 
 /* Q2: How many facilities do not charge a fee to members? */
 4
@@ -49,7 +49,7 @@ facilities in question. */
 
 SELECT * 
 FROM Facilities 
-WHERE membercost < 0.2*monthlymaintenance;
+WHERE membercost < 0.2*monthlymaintenance
 
 /* Q4: Write an SQL query to retrieve the details of facilities with ID 1 and 5.
 Try writing the query without using the OR operator. */
@@ -57,7 +57,7 @@ Try writing the query without using the OR operator. */
 SELECT * 
 FROM Facilities 
 WHERE facid 
-IN(1,5);
+IN(1,5)
 
 /* Q5: Produce a list of facilities, with each labelled as
 'cheap' or 'expensive', depending on if their monthly maintenance cost is
@@ -134,7 +134,7 @@ FROM (
    LEFT JOIN Facilities AS F ON B.facid = F.facid
    WHERE DATE( B.starttime ) = '2012-09-14') AS cst
 WHERE cost IS NOT NULL
-ORDER BY cost DESC;
+ORDER BY cost DESC
 
 
 /* PART 2: SQLite
